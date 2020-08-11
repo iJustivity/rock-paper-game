@@ -1,0 +1,41 @@
+gaming_input = ['r', 'p', 's']
+
+while (True):
+    one_user = input("Player 1\t: ").casefold()
+    two_user = input("Player 2\t: ").casefold()
+
+    if one_user and two_user in gaming_input:
+
+        if (one_user == 'r') and (two_user == 'r'):
+            print("Match Draw")
+        elif (one_user == 'r') and (two_user == 'p'):
+            print("Player 2 won the game")
+        elif (one_user == 'r') and (two_user == 's'):
+            print("Player 1 won the game")
+
+        elif (one_user == 'p') and (two_user == 'r'):
+            print("Player 1 won the game")
+        elif (one_user == 'p') and (two_user == 'p'):
+            print("Match Draw")
+        elif (one_user == 'p') and (two_user == 's'):
+            print("Player 2 won the game")
+
+        elif (one_user == 's') and (two_user == 'r'):
+                print("Player 2 won the game")
+        elif (one_user == 's') and (two_user == 'p'):
+                 print("Player 1 won the game")
+        elif (one_user == 's') and (two_user == 's'):
+                print("Match Draw")
+
+        else:
+            print("Input not understood. Please re-enter the values :)")
+
+            print("\n")
+    continue_input = input("Want to try again? (y/n): ").casefold()
+    print("\n")
+
+    if (continue_input == 'y') or (continue_input == 'yes'):
+        continue
+    else:
+            print("See you again. Bye")
+            break
